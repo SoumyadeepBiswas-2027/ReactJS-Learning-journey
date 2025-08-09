@@ -1,0 +1,10 @@
+.DispScreen{
+  height: 45px;
+  width:300px;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.DispContainer{
+  padding: 15px;  
+}
