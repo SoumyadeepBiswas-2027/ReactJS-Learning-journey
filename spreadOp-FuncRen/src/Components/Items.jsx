@@ -1,15 +1,13 @@
 import styles from "./Items.module.css";
-
-function Items() {
-
-  
+function Items({items}) {
+      
  return (
-  
 <>
 <div className={styles.Items}>
-  <ul class="list-group">
-    <li className="list-group-item">An item</li>
-    <li className="list-group-item">A second item</li>
+  <ul className="list-group">
+    {items.map((item) =>(
+    <li  className="list-group-item">{item}</li> //key={item}
+    ))}
   </ul>
 </div>
 </>

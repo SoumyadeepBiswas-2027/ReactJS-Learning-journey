@@ -5,16 +5,23 @@ import { useState } from 'react';
 
 function App() {
 
+  const[CurrAdd,setAdd] = useState("");
+  const[items,setItems] = useState([])
+
+  const handleOnClick= ()=>{
+      setItems([...items, CurrAdd]); // add
+      setAdd(""); // clear input
+  };
+  
   return (
     <>
     <div className=' Container'>
-      <Display/> 
-      <button className='btn' onClick={(event) =>{
-        console.log(event);
-      }}>Enter</button>
+      <Display CurrAdd={CurrAdd} setAdd={setAdd}/> 
+      <button className='btn' onClick={handleOnClick}>Enter</button>
     </div>
-      <Items/>
+      <Items items={items} />
     </>
+        
    );
 }
 export default App;
