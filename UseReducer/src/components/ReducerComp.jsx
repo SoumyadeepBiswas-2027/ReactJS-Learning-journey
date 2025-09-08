@@ -5,6 +5,9 @@ const ReducerComp = () =>{
 
   const initialState ={
     count: 0,
+    inrement:2,
+    decrement:2,
+    //we have single initial state but multiple properties
 
   };
 
@@ -22,18 +25,18 @@ const ReducerComp = () =>{
     // }
     switch(action.type){
       case "INCREMENT":
-        return {count: state.count + 1};
+        return {
+          ...state,
+          count: state.count + 1};
 
         case "DECREMENT":
-         return {count: state.count - 1};
+         return {...state, count: state.count - 1};
 
         case "RESET":
-         return {count: 0};
+         return {...state, count: 0};
 
         default: 
         return state;
-      
-
     }
   }
   // const[count, dispatch] =useReducer(reducer, 0);
