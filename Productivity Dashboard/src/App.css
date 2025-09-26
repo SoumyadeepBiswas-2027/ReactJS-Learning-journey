@@ -1,0 +1,13 @@
+.inputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.input{
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  height: 23px;
+}
