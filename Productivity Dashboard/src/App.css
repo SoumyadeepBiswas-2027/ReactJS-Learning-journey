@@ -11,14 +11,14 @@
   padding: 10px;
   font-size: 16px;
   width: 50%;
-  height: 30px;                    
+  height: 40px;                    
 }
 
 /* IntroText styling */
 .introText {
   font-size: 4rem;                 
   font-weight: bold;               
-  color: #333;                     
+  color: #b7b7db;                     
   letter-spacing: 2px;             
   text-transform: uppercase;       
   font-family: 'Arial', sans-serif;
@@ -28,7 +28,7 @@
   text-align: center;              
   margin-bottom: 20px;           
 }
-.btn{
+.input-btn{
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -36,8 +36,33 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 25px;
+  font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
+  margin-left: 10px;
+}
+
+.listContainer{
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  height: 30px; 
+  align-items: center;
+  margin-left: 23%;
+  color: rgb(196, 183, 97);
+}
+
+html, body {
+ background-color: #312752fc !important; /* Dark purple - Indigo */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff !important;  /* White text for better contrast */
+  height: 100%;
+  
+}
+
+.list-group-item {
+  background-color: rgb(196, 183, 97) !important; /* Container color */
+  color: #000000fc !important; /* Text color for contrast */
 }
