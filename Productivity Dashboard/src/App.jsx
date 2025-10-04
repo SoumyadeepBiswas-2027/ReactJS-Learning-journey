@@ -5,20 +5,30 @@ import HeroStyle from "./BitsStore/Aurora";
 import TodoItems from "./components/TodoItems";
 import AddTodo from "./components/AddTodo";
 import { useState } from "react";
+import EmptyText from "./BitsStore/EmptyText";
 
 function App() {
-  const [initialVal , setTodoVal] = useState([]);
+  const [todos, setTodos] = useState([]);
 
-    if (initialVal.length === 0){
-      console.log("No val");
-    }
-  
   return (
     <>
       <HeroStyle className="aurora-container" />
       <IntroText className="introText" />
       <AddTodo />
-      <TodoItems  value={initialVal}/>
+
+      {todos.length === 0 ? (
+        <div
+          style={{
+            marginTop: '20px',
+            marginLeft: '20px',
+            display: 'inline-block'
+          }}
+        >
+          <EmptyText hoverIntensity={0.5} />
+        </div>
+      ) : (
+        <TodoItems value={todos} />
+      )}
     </>
   );
 }
