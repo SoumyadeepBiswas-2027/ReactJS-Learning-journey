@@ -1,6 +1,5 @@
 import { AiFillEdit } from "react-icons/ai";
 
-
 function AddTodo() {
   return (
     <div className="inputContainer">
@@ -9,7 +8,7 @@ function AddTodo() {
         placeholder="what's in your mind..."
         className="input"
       />
-      <button className="input-btn" type="button">
+      <button className="input-btn" type="button" onClick={()=> {console.log("working");}}>
         <AiFillEdit />
       </button>
     </div>
