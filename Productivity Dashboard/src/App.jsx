@@ -10,11 +10,10 @@ import EmptyText from "./BitsStore/EmptyText";
 function App() {
   const [todos, setTodos] = useState([]);
 
-  const handleonChange = (e) => {
-    console.log(`item changed is ${e}`);
-    const newTodoItems= [...todos,{
-      
-    }]
+  const handleonChange = (newTodoText) => {
+    console.log(`item changed is ${newTodoText}`);
+    const newTodoItems= [...todos,newTodoText];
+    setTodos(newTodoItems)
   };
                                                                                               
   return (
