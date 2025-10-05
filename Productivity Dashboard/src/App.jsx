@@ -10,25 +10,26 @@ import EmptyText from "./BitsStore/EmptyText";
 function App() {
   const [todos, setTodos] = useState([]);
 
+  const handleonChange = (e) => {
+    console.log(`item changed is ${e}`);
+    const newTodoItems= [...todos,{
+      
+    }]
+  };
+                                                                                              
   return (
     <>
       <HeroStyle className="aurora-container" />
       <IntroText className="introText" />
-      <AddTodo />
-
+      <AddTodo handleonChange={handleonChange} />
       {todos.length === 0 ? (
-        <div
-          style={{
-            marginTop: '20px',
-            marginLeft: '20px',
-            display: 'inline-block'
-          }}
-        >
+        <div  style={{marginTop: '20px',marginLeft: '20px',display: 'inline-block'}}>
           <EmptyText hoverIntensity={0.5} />
         </div>
       ) : (
         <TodoItems value={todos} />
       )}
+
     </>
   );
 }

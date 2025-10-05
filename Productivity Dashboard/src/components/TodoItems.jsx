@@ -1,4 +1,4 @@
-function TodoItems({ value }) {
+function TodoItems({ value }) {  
   return (
     <div className="listContainer">
       <ul className="list-group">
@@ -9,7 +9,7 @@ function TodoItems({ value }) {
         ))}
       </ul>
     </div>
-  );
+  ); 
 }
 
 export default TodoItems;
