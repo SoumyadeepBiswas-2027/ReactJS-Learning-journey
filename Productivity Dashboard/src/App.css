@@ -11,7 +11,8 @@
   padding: 10px;
   font-size: 16px;
   width: 50%;
-  height: 40px;                    
+  height: 40px;   
+   border-radius: 10px                 
 }
 
 /* IntroText styling */
@@ -51,6 +52,8 @@
   align-items: center;
   margin-left: 23%;
   color: rgb(196, 183, 97);
+  margin-top: 10px;  
+  border-radius: 10px; 
 }
 
 html, body {
@@ -65,5 +68,24 @@ html, body {
 .list-group-item {
   background-color: rgb(196, 183, 97) !important; /* Container color */
   color: #000000fc !important; /* Text color for contrast */
+  border-radius: 10px; 
 }
+
+.Delete-Btn{
+   background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-left: 10px;
+  
+}
+
+
 
