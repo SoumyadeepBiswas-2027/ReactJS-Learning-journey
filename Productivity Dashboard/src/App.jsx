@@ -11,11 +11,14 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const handleonChange = (newTodoText) => {
-    console.log(`item changed is ${newTodoText}`);
     const newTodoItems= [...todos,newTodoText];
     setTodos(newTodoItems)
   };
-                                                                                              
+  const handleDeleteButtonClicked =( todoToDelete)=>{
+  const newTodos = todos.filter(todo => todo !== todoToDelete);
+  setTodos(newTodos);
+  }
+
   return (
     <>
       <HeroStyle className="aurora-container" />
@@ -26,7 +29,7 @@ function App() {
           <EmptyText hoverIntensity={0.5} />
         </div>
       ) : (
-        <TodoItems value={todos} />
+        <TodoItems value={todos} onDelete={ handleDeleteButtonClicked }/>
       )}
 
     </>

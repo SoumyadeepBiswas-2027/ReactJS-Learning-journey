@@ -2,14 +2,14 @@ import { AiFillEdit } from "react-icons/ai";
 import { useState } from "react";
 
 function AddTodo({handleonChange}) {
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   }
 
   const handleAddButtonClicked =() =>{
-    handleonChange(inputValue);
+    handleonChange(inputValue); 
     setInputValue("");
   }
 
