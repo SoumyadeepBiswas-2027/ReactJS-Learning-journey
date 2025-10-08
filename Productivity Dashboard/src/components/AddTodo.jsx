@@ -9,11 +9,15 @@ function AddTodo({handleonChange}) {
   }
 
   const handleAddButtonClicked =() =>{
+  if (inputValue==""){
+    return;
+  }
     handleonChange(inputValue); 
     setInputValue("");
   }
 
   return (
+
     <div className="inputContainer">
       <input
         type="text"

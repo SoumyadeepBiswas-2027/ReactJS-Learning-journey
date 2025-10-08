@@ -1,3 +1,5 @@
+import { AiFillDelete } from "react-icons/ai";
+
 function TodoItems({ value, onDelete }) {
   return (
     <div className="listContainer">
@@ -7,9 +9,8 @@ function TodoItems({ value, onDelete }) {
             <li className="list-group-item" style={{ flex: 1, marginBottom: 0 }}>
               <span className="item-text">{item}</span>
             </li>
-
             <button className="Delete-Btn" onClick={() => {onDelete(item) }}>
-              Delete
+              <AiFillDelete />
             </button>
           </div>
         ))}
