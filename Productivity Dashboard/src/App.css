@@ -57,7 +57,7 @@
 }
 
 html, body {
- background-color: #312752fc !important; /* Dark purple - Indigo */
+ background-color: #251a49fc !important; /* Dark purple - Indigo */
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff !important;  /* White text for better contrast */
@@ -70,7 +70,6 @@ html, body {
   color: #000000fc !important; /* Text color for contrast */
   border-radius: 10px; 
 }
-
 .Delete-Btn{
    background-color: #ff0000; /* Green */
   border: none;
@@ -87,8 +86,25 @@ html, body {
   
 }
 
-
-
 .item-text{
    font-weight: bold;
 }
+
+.Complete-Btn {
+  width: auto;
+  height: 50px;
+  background-color: #1100ff; /* Green */
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Complete-Btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+

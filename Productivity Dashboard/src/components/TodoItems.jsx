@@ -1,12 +1,15 @@
 import { AiFillDelete } from "react-icons/ai";
+import { AiOutlineCheck } from "react-icons/ai";
 
 function TodoItems({ value, onDelete }) {
   return (
     <div className="listContainer">
       <ul className="list-group">
         {value.map((item, index) => (
-          <li key={index} className="list-group-item" style={{ display: "flex", alignItems: "center" }}>
-            <span className="item-text" style={{ flex: 1 }}>{item}</span>
+          <div key={index} style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+            <li className="list-group-item" style={{ flex: 1 }}>
+              <span className="item-text">{item}</span>
+            </li>
             <button
               className="Delete-Btn"
               onClick={() => {
@@ -15,12 +18,11 @@ function TodoItems({ value, onDelete }) {
             >
               <AiFillDelete />
             </button>
-            <button className="Complete-Btn">Right</button>
-          </li>
+            <button className="Complete-Btn"><AiOutlineCheck /></button>
+          </div>
         ))}
       </ul>
     </div>
   );
 }
-
 export default TodoItems;
