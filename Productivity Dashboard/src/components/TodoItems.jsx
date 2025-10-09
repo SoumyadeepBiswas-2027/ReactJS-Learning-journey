@@ -5,14 +5,18 @@ function TodoItems({ value, onDelete }) {
     <div className="listContainer">
       <ul className="list-group">
         {value.map((item, index) => (
-          <div key={index} style={{ display: "flex", alignItems: "center" }}>
-            <li className="list-group-item" style={{ flex: 1, marginBottom: 0 }}>
-              <span className="item-text">{item}</span>
-            </li>
-            <button className="Delete-Btn" onClick={() => {onDelete(item) }}>
+          <li key={index} className="list-group-item" style={{ display: "flex", alignItems: "center" }}>
+            <span className="item-text" style={{ flex: 1 }}>{item}</span>
+            <button
+              className="Delete-Btn"
+              onClick={() => {
+                onDelete(item);
+              }}
+            >
               <AiFillDelete />
             </button>
-          </div>
+            <button className="Complete-Btn">Right</button>
+          </li>
         ))}
       </ul>
     </div>
