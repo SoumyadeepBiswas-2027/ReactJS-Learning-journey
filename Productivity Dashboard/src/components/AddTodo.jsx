@@ -1,23 +1,22 @@
 import { AiFillEdit } from "react-icons/ai";
 import { useState } from "react";
 
-function AddTodo({handleonChange}) {
+function AddTodo({ handleonChange }) {
   const [inputValue, setInputValue] = useState("");
+  const [dateTime, setDateTime] = useState("");
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
-  }
+  };
 
-  const handleAddButtonClicked =() =>{
-  if (inputValue==""){
-    return;
-  }
-    handleonChange(inputValue); 
+  const handleAddButtonClicked = () => {
+    if (inputValue === "") return;
+    handleonChange({ text: inputValue, datetime: dateTime });
     setInputValue("");
-  }
+    setDateTime("");
+  };
 
   return (
-
     <div className="inputContainer">
       <input
         type="text"
@@ -26,7 +25,19 @@ function AddTodo({handleonChange}) {
         placeholder="what's in your mind..."
         className="input"
       />
-      <button className="input-btn" type="button" onClick={handleAddButtonClicked}>
+
+      <input
+        type="datetime-local"
+        value={dateTime}
+        onChange={(e) => setDateTime(e.target.value)}
+        className="input-DateTime"
+      />
+
+      <button
+        className="input-btn"
+        type="button"
+        onClick={handleAddButtonClicked}
+      >
         <AiFillEdit />
       </button>
     </div>

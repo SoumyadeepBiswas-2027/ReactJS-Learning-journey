@@ -69,6 +69,7 @@ html, body {
   background-color: rgb(196, 183, 97) !important; /* Container color */
   color: #000000fc !important; /* Text color for contrast */
   border-radius: 10px; 
+  flex: 1;
 }
 .Delete-Btn{
    background-color: #ff0000; /* Green */
@@ -108,3 +109,10 @@ html, body {
   background-color: #45a049; /* Darker green on hover */
 }
 
+.input-DateTime{
+  padding: 10px;
+  font-size: 16px;
+  width: 20%;
+  height: 40px;   
+   border-radius: 10px 
+}

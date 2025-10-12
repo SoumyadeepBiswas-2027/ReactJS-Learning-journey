@@ -14,14 +14,27 @@ function TodoItems({ value, onDelete }) {
               marginBottom: "10px",
             }}
           >
-            <li className="list-group-item" style={{ flex: 1 }}>
-              <span className="item-text">{item}</span>
+            <li className="list-group-item">
+              
+              <span className="item-text">{item.text}</span>
+
+              <br />
+
+              <small className="item-datetime-local">
+                Due: {new Date(item.datetime).toLocaleString()}
+              </small>
+
             </li>
 
-            <button className="Delete-Btn" onClick={() => {onDelete(item);}}>
+            <button
+              className="Delete-Btn"
+              onClick={() => {
+                onDelete(item);
+              }}
+            >
               <AiFillDelete />
             </button>
-            
+
             <Complete></Complete>
           </div>
         ))}

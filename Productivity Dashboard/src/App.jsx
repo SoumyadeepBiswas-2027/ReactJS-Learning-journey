@@ -14,10 +14,11 @@ function App() {
     const newTodoItems= [...todos,newTodoText];
     setTodos(newTodoItems)
   };
-  const handleDeleteButtonClicked =( todoToDelete)=>{
-  const newTodos = todos.filter(todo => todo !== todoToDelete);
-  setTodos(newTodos);
-  }
+
+  const handleDeleteButtonClicked = (todoToDelete) => {
+    const newTodos = todos.filter((todo) => todo !== todoToDelete);
+    setTodos(newTodos);
+  };
 
   return (
     <>
@@ -25,13 +26,18 @@ function App() {
       <IntroText className="introText" />
       <AddTodo handleonChange={handleonChange} />
       {todos.length === 0 ? (
-        <div  style={{marginTop: '20px',marginLeft: '20px',display: 'inline-block'}}>
+        <div
+          style={{
+            marginTop: "20px",
+            marginLeft: "20px",
+            display: "inline-block",
+          }}
+        >
           <EmptyText hoverIntensity={0.5} />
         </div>
       ) : (
-        <TodoItems value={todos} onDelete={ handleDeleteButtonClicked }/>
+        <TodoItems value={todos} onDelete={handleDeleteButtonClicked} />
       )}
-
     </>
   );
 }
