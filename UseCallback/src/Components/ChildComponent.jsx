@@ -8,3 +8,5 @@ export const ChildComponent = React.memo((props) => {
 })
 
 //if we wrap our component in react.memo then components will be re-rendered only when the props ofcomponent change
+
+//But if we send a function ,then react.memo wont be able to save u from re-rendering

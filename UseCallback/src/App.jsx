@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 import { ChildComponent } from "./Components/ChildComponent";
 
 function App() {
   const [count, setCount] = useState(0);
 
-  function handleClick() {
+  const handleClick = useCallback(() => {
     setCount(count + 1);
-  }
+  }, [count]);
+
   return (
     <div>
       <div>Count: {count}</div>
@@ -15,10 +16,7 @@ function App() {
       <button onClick={handleClick}>Increment</button>
       <br /> <br />
       <div>
-        <ChildComponent 
-        buttonName="Click me"
-        handleClick={handleClick}
-        />
+        <ChildComponent buttonName="Click me" handleClick={handleClick} />
       </div>
     </div>
   );
